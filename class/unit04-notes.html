@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>Tables and Forms</title>
 </head>
 
 <body>
     <table border="8" cellpadding="6" cellspacing="10">
+        <caption>This is a Caption</caption>
         <tr>
             <th>Country</th>
             <th>Population</th>
@@ -39,9 +40,10 @@
             <td>220,892,331</td>
             <td>2.83%</td>
         </tr>
-        <caption>This is a Caption</caption>
         </table>
+
         <p>&nbsp;</p>
+
         <form action="" method="">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="fname">
@@ -53,21 +55,30 @@
             </textarea>
             <br>
 
-            <input type="radio" id="a" name="letters">
+            <input type="radio" id="a" name="letters" value="A">
             <label for="a">A</label>
-            <input type="radio" id="b" name="letters">
+            <input type="radio" id="b" name="letters" value="B">
             <label for="b">B</label>
-            <input type="radio" id="c" name="letters">
+            <input type="radio" id="c" name="letters" value="C">
             <label for="c">C</label>
 
             <br>
-            <input type="checkbox" id="d" name="nextletters">
+            <input type="checkbox" id="d" name="nextletters" value="D">
             <label for="d">D</label>
-            <input type="checkbox" id="e" name="nextletters">
+            <input type="checkbox" id="e" name="nextletters" value="E">
             <label for="e">E</label>
-            <input type="checkbox" id="f" name="nextletters">
+            <input type="checkbox" id="f" name="nextletters" value="F">
             <label for="f">F</label>
 
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+            </select>
+
+            <input type="submit" value="Send Form">
 
         </form>
 </body>
