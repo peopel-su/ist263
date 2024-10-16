@@ -19,3 +19,4 @@ nav a {
 nav a:hover {background-color:#e8702a}
 
 .evenrow {background-color:#36e287;}
+table, th, td {border: 1px solid black;}
