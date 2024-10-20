@@ -36,3 +36,6 @@ table, th, td {border: 1px solid black;}
 div.links {
     flex: 2;
 }
+.skillstable {
+    margin: 1em auto;
+}
