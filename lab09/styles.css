@@ -1,0 +1,46 @@
+body {background-color: #fde5bc;
+font-family: Arial, Helvetica, sans-serif;
+color: #045f68;
+}
+a {color: #e8702a;}
+h1, h2 {color: #0c457d;}
+
+nav {
+    background-color: #6bd2db;
+    color:#e8702a;
+    padding: 1rem;
+    margin-bottom: 2em;
+}
+nav a {
+    color: #0c457d;
+    padding: 1em;
+}
+
+nav a:hover {background-color:#e8702a}
+
+.evenrow {background-color:#36e287;}
+table, th, td {border: 1px solid black;}
+
+.firstrow, .secondrow {
+    display: flex;
+    background-color: #ececeb;
+    border-radius: 1em;
+    margin: 1.5em;
+    padding: 1.5em;
+}
+.address {
+    {flex: 1;}
+    margin: 1em;
+}
+.links {
+    {flex: 1;}
+    margin: 1em;
+}
+.form {
+    {flex: 1;}
+    margin: 1em;
+}
+.map {
+    {flex: 1;}
+    margin: 1em;
+}
