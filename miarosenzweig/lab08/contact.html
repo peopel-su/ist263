@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+font-family: Arial, sans-serif;
+}
+h1 {
+color: #FF1493;
+font-family: Arial, sans-serif;
+}
+h2 {
+font-size: 2em; /* Size for the secondary heading */
+font-family: Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html">Home</a> |
+<a href="skills.html">Skills</a> |
+<a href="contact.html">Contact</a>
+</nav>
+<h1>Contact</h1>
+<p>Mia Rosenzweig<br>
+Syracuse University<br>
+900 Crouse Ave, Syracuse, NY 13244</p>
+<p><a href="mailto:mirosenz@syr.edu">Mia Rose Email</a></p>
+<p>
+<a href="https://www.linkedin.com/in/miarosenzweig/" target="_blank">
+My LinkedIn Profile
+<img src="../lab05/linkedin_image.png" alt="LinkedIn Logo" style="width: 20px;
+height: 20px;">
+</a>
+</p>
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!
+1d2909.950265922529!2d-76.13513378476475!3d43.03799597914633!2m3!1f0!2f0!3f0!3m2!
+1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3e0855a9eaf%3A0xb10362fa7a170478!2sSyracuse
+%20University!5e0!3m2!1sen!2sus!4v1633918289494!5m2!1sen!2sus"
+width="600"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+<h2>Contact Me</h2>
+<form action="submit_form.php" method="POST">
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name" required><br><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email" required><br><br>
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" rows="4" required></textarea><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

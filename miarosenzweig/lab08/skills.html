@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills</title> <!-- Changed title to "Skills" -->
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+font-family: Arial, sans-serif;
+}
+nav {
+margin-bottom: 20px; /* Added spacing for navigation */
+}
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+}
+th, td {
+padding: 10px;
+text-align: center;
+}
+caption {
+font-weight: bold;
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+/* Styles for even rows */
+.evenrow {
+background-color: lightblue;
+}
+h1 {
+font-size: 2.5em; /* Size for the main heading */
+}
+h2 {
+font-size: 2em; /* Size for the secondary heading */
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html">Home</a> |
+<a href="skills.html">Skills</a> |
+<a href="contact.html">Contact</a>
+</nav>
+<h1>My Skills!</h1>
+<table>
+<caption>Technical Skills</caption>
+<tr>
+<th>Category</th>
+<th>Skill</th>
+<th>Proficiency Level</th>
+</tr>
+<tr class="evenrow"> <!-- Only using evenrow class for zebra striping -->
+<td>Programming</td>
+<td>Python</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td>Data Analysis</td>
+<td>R</td>
+<td>Intermediate</td>
+</tr>
+<tr class="evenrow">
+<td>Web Development</td>
+<td>HTML & CSS</td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td>Data Visualization</td>
+<td>Power BI</td>
+<td>Advanced</td>
+</tr>
+<tr class="evenrow">
+<td>Programming</td>
+<td>SQL</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td>Data Analysis</td>
+<td>Alteryx</td>
+<td>Intermediate</td>
+</tr>
+<tr class="evenrow">
+<td>Web Development</td>
+<td>JavaScript</td>
+<td>Beginner</td>
+</tr>
+<tr>
+<td>Office Tools</td>
+<td>Microsoft Excel</td>
+<td>Advanced</td>
+</tr>
+<tr class="evenrow">
+<td>Machine Learning</td>
+<td>Scikit-learn</td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td>Data Visualization</td>
+<td>Tableau</td>
+<td>Beginner</td>
+</tr>
+</table>
+<h2>Contact Form!</h2>
+<!-- Contact Form -->
+<form action="https://formspree.io/f/xgvwbjow" method="POST">
+<!-- Text Field -->
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required><br><br>
+<!-- Select Dropdown -->
+<label for="reason">Reason for Contacting:</label>
+<select id="reason" name="reason">
+<option value="general">General Inquiry</option>
+<option value="support">Support</option>
+<option value="feedback">Feedback</option>
+</select><br><br>
+<!-- Text Area -->
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="4" cols="50"
+required></textarea><br><br>
+<!-- Submit Button -->
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
