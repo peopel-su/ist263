@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f0f0f0;
+}
+nav {
+background-color: #ff79b0;
+padding: 10px;
+margin-bottom: 20px;
+}
+nav a {
+color: white;
+text-decoration: none;
+margin-right: 15px;
+font-weight: bold;
+}
+nav a:hover {
+color: #ff2d55;
+}
+/* Flexbox Styles */
+.flexbox {
+display: flex;
+justify-content: space-between;
+align-items: stretch; /* Ensure both children stretch to the same height */
+margin-bottom: 20px;
+}
+.skillstable {
+flex: 1; /* Allow this element to grow */
+padding: 20px;
+background-color: #a5d6a7; /* Set common background color */
+border-radius: 8px;
+}
+.skillsimage {
+flex: 1; /* Allow this element to grow */
+padding: 20px;
+background-color: #a5d6a7; /* Set common background color */
+border-radius: 8px;
+text-align: center; /* Center the image in its container */
+}
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+width: 100%;
+}
+th, td {
+padding: 10px;
+text-align: center;
+}
+caption {
+font-weight: bold;
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+/* Different row colors */
+tr:nth-child(even) {
+background-color: #e0f7fa; /* Light cyan for even rows */
+}
+tr:nth-child(odd) {
+background-color: #ffe0b2; /* Light orange for odd rows */
+}
+h1 {
+font-size: 2.5em;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html">Home</a> |
+<a href="skills.html">Skills</a> |
+<a href="contact.html">Contact</a>
+</nav>
+<h1>Technical Skills</h1>
+<div class="flexbox">
+<div class="skillstable">
+<table>
+<caption>Technical Skills</caption>
+<tr>
+<th>Category</th>
+<th>Skill</th>
+<th>Proficiency Level</th>
+</tr>
+<tr class="evenrow">
+<td>Programming</td>
+<td>Python</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td>Data Analysis</td>
+<td>R</td>
+<td>Intermediate</td>
+</tr>
+<tr class="evenrow">
+<td>Web Development</td>
+<td>HTML & CSS</td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td>Data Visualization</td>
+<td>Power BI</td>
+<td>Advanced</td>
+</tr>
+<tr class="evenrow">
+<td>Programming</td>
+<td>SQL</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td>Data Analysis</td>
+<td>Alteryx</td>
+<td>Intermediate</td>
+</tr>
+<tr class="evenrow">
+<td>Web Development</td>
+<td>JavaScript</td>
+<td>Beginner</td>
+</tr>
+<tr>
+<td>Office Tools</td>
+<td>Microsoft Excel</td>
+<td>Advanced</td>
+</tr>
+<tr class="evenrow">
+<td>Machine Learning</td>
+<td>Scikit-learn</td>
+<td>Intermediate</td>
+</tr>
+<tr>
+<td>Data Visualization</td>
+<td>Tableau</td>
+<td>Beginner</td>
+</tr>
+</table>
+</div>
+<div class="skillsimage">
+<img src="https://peopel-su.github.io/ist263/images/skill_3775447.png" alt="Skills
+Image" style="max-width: 100%; height: auto;">
+</div>
+</div>
+</body>
+</html>

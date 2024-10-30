@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f0f0f0;
+}
+h1 {
+color: #FF1493;
+}
+h2 {
+font-size: 2em;
+margin-bottom: 10px;
+}
+/* Flexbox layout for rows */
+.row {
+display: flex;
+justify-content: space-between;
+margin-bottom: 30px; /* Ensure space between rows */
+padding: 20px; /* Space between edge of page and flexboxes */
+}
+/* Flex properties for columns within each row */
+.column {
+flex: 1;
+padding: 20px; /* Space inside the containers */
+background-color: #fff; /* Background color for both boxes */
+border-radius: 10px; /* Rounded corners */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better
+appearance */
+}
+/* Optional: limit width of first column */
+.column-1 {
+max-width: 300px;
+}
+/* Flex layout for form and map */
+.form-container {
+flex: 1;
+margin-right: 20px; /* Space between form and map */
+}
+.map-container {
+flex: 1;
+}
+/* Ensure form and map fill space and are not squished */
+iframe {
+width: 100%;
+height: 100%;
+min-height: 450px;
+border-radius: 10px; /* Rounded corners for map */
+}
+/* Styling the form */
+form {
+display: flex;
+flex-direction: column;
+}
+label {
+margin-bottom: 5px;
+font-weight: bold;
+}
+input[type="text"], input[type="email"], textarea {
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 5px;
+width: 100%;
+}
+input[type="submit"] {
+padding: 10px;
+background-color: #FF1493;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1em;
+}
+input[type="submit"]:hover {
+background-color: #ff79b0;
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html">Home</a> |
+<a href="skills.html">Skills</a> |
+<a href="contact.html">Contact</a>
+</nav>
+<h1>Contact</h1>
+<!-- Row 1: Address and Email/LinkedIn -->
+<div class="row">
+<div class="column column-1">
+<p>Mia Rosenzweig<br>
+Syracuse University<br>
+900 Crouse Ave, Syracuse, NY 13244</p>
+</div>
+<div class="column">
+<p><a href="mailto:mirosenz@syr.edu">Mia Rose Email</a></p>
+<p>
+<a href="https://www.linkedin.com/in/miarosenzweig/" target="_blank">
+My LinkedIn Profile
+<img src="../lab05/linkedin_image.png" alt="LinkedIn Logo" style="width: 20px;
+height: 20px;">
+</a>
+</p>
+</div>
+</div>
+<!-- Row 2: Form and Google Map -->
+<div class="row">
+<div class="column form-container">
+<h2>Contact Me</h2>
+<form action="submit_form.php" method="POST">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="4" required></textarea>
+<input type="submit" value="Submit">
+</form>
+</div>
+<div class="column map-container">
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!
+1d2909.950265922529!2d-76.13513378476475!3d43.03799597914633!2m3!1f0!2f0!3f0!
+3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3e0855a9eaf%3A0xb10362fa7a170478!
+2sSyracuse%20University!5e0!3m2!1sen!2sus!4v1633918289494!5m2!1sen!2sus"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</div>
+</body>
+</html>
