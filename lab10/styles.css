@@ -34,6 +34,8 @@ table, th, td {border: 1px solid black;}
     flex: 1;
     margin: 1em;
 }
+nav {display: flex;}
+nav a {flex: 1;}
 div.links {
     flex: 2;
 }
@@ -48,13 +50,11 @@ div.links {
 /* Responsiveness */
 .bioimage {max-width: 100%;}
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 600px) {
     nav {
-        display: flex;
         flex-wrap: wrap;
     }
     nav a {
-        flex: 1;
         width: 100%;
         display: block;
     }
