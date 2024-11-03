@@ -36,7 +36,6 @@ table, th, td {border: 1px solid black;}
 }
 nav {
     display: flex;
-    flex-wrap: wrap;
 }
 nav a {
     flex: 1;
@@ -56,6 +55,9 @@ div.links {
 .bioimage {max-width: 100%;}
 
 @media only screen and (max-width: 800px) {
+    nav {
+        flex-wrap: wrap;
+    }
     nav a {
         display: block;
         width: 100%;
