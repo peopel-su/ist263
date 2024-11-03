@@ -1,0 +1,69 @@
+body {background-color: #fde5bc;
+font-family: Arial, Helvetica, sans-serif;
+color: #045f68;
+}
+a {color: #e8702a;}
+h1, h2 {color: #0c457d;}
+
+/* Initial nav styling */
+nav {
+    background-color: #6bd2db;
+    color:#e8702a;
+    padding: 1rem;
+    margin-bottom: 2em;
+}
+nav a {
+    color: #0c457d;
+    padding: 1em;
+}
+nav a:hover {background-color:#e8702a}
+
+.evenrow {background-color:#36e287;}
+table, th, td {border: 1px solid black;}
+
+/* Flexbox & centering */
+.firstrow, .secondrow {
+    display: flex;
+    background-color: #ececeb;
+    border-radius: 1em;
+    margin: 1.5em;
+    padding: 1.5em;
+}
+.firstrow div, .secondrow div, .secondrow .map {
+    flex: 1;
+    margin: 1em;
+}
+div.links {
+    flex: 2;
+}
+.skillstable table {
+    margin: 0 auto;
+}
+.skillsimage {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+}
+nav a {
+    flex: 1;
+}
+
+/* Responsiveness */
+img {max-width: 100%;}
+
+@media only screen and (max-width: 760px) {
+    nav {
+        flex-wrap: wrap;
+    }
+    nav a {
+        width: 100%;
+        display: block;
+    }
+    nav span {
+        display: none;
+    }
+
+
+}
