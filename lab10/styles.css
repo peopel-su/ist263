@@ -44,14 +44,10 @@ div.links {
     text-align: center;
 }
 
-
 /* Responsiveness */
 .bioimage {max-width: 100%;}
 
 @media only screen and (max-width: 800px) {
-    nav {
-        /* display: flex;
-            flex-wrap: wrap;    } */
     nav a {
         display: block;
         width: 100%;
