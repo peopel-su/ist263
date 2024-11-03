@@ -34,7 +34,10 @@ table, th, td {border: 1px solid black;}
     flex: 1;
     margin: 1em;
 }
-nav {display: flex;}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
 nav a {flex: 1;}
 div.links {
     flex: 2;
@@ -50,12 +53,10 @@ div.links {
 /* Responsiveness */
 .bioimage {max-width: 100%;}
 
-@media only screen and (max-width: 600px) {
-    nav {
-        flex-wrap: wrap;
-    }
+@media only screen and (max-width: 800px) {
     nav a {
         display: block;
+        width: 100%;
     }
     nav span {
         display: none;
