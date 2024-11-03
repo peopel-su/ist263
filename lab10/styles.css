@@ -24,6 +24,7 @@ table, th, td {border: 1px solid black;}
 /* Flexbox & centering */
 .firstrow, .secondrow {
     display: flex;
+    flex-wrap: wrap;
     background-color: #ececeb;
     border-radius: 1em;
     margin: 1.5em;
