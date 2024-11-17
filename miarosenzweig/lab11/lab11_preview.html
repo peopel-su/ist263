@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- shell game with messages displaying in browser -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11</title>
+    <!-- Changed to animate2.css -->
+    <link rel="stylesheet" href="https://peopel-su.github.io/ist263/images/animate2.css">
+    <style>
+        /* Flexbox styling for the container */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Choose a Walnut</h1>
+
+    <!-- Flex container for the walnut images -->
+    <div class="container">
+        <img src="https://peopel-su.github.io/ist263/images/walnut.png" alt="first walnut" id="first" onclick="WinnerMessage()">
+        <img src="https://peopel-su.github.io/ist263/images/walnut.png" alt="second walnut" id="second" onclick="TryAgain()">
+        <img src="https://peopel-su.github.io/ist263/images/walnut.png" alt="third walnut" id="third" onclick="TryAgain()">
+    </div>
+
+    <!-- Empty div to display the dynamic message -->
+    <div id="message"></div>
+
+    <script>
+        // Function that displays a "You Won" message
+        function WinnerMessage() {
+            document.getElementById('message').innerHTML = 'You Won!';
+        }
+
+        // Function that displays a "Wrong Shell - Try Again" message
+        function TryAgain() {
+            document.getElementById('message').innerHTML = 'Wrong Shell - Try Again';
+        }
+
+
+    </script>
+</body>
+</html>
