@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 2.5rem; /* Relative font size */
+        }
+
+        h2 {
+            font-size: 2rem; /* Relative font size */
+        }
+
+        footer {
+            overflow: hidden; /* Ensure footer doesn't collapse */
+        }
+
+        .footer-quote {
+            float: right; /* Position the quote to the right */
+        }
+
+        .footer-copyright {
+            float: left; /* Keep the copyright on the left */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* Media query for tablets (widths between 768px and 1024px) */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            nav a {
+                display: inline-block;
+                padding: 8px;
+                font-size: 1.2rem;
+            }
+
+            .footer-quote,
+            .footer-copyright {
+                float: none;
+                text-align: center;
+            }
+        }
+
+        /* Media query for mobile devices (widths up to 767px) */
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            footer {
+                text-align: center;
+                font-size: 0.9rem;
+            }
+
+            .footer-quote,
+            .footer-copyright {
+                float: none;
+                text-align: center;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to Content</a>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="skills.html">Skills</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <header>
+        <img src="../lab05/lab05_poster.pdf" alt="A digital poster showcasing Mia Rosenzweig's background and interests" class="responsive-img">
+    </header>
+
+    <main id="main-content">
+        <section>
+            <header>
+                <h1>Mia Rosenzweig's Biography</h1>
+            </header>
+            <p>At age 3, Mia discovered her passion for playing the best sport ever, <strong>soccer.</strong> She played soccer almost every day of her life until she was 18. She's played on multiple club and school teams. Additionally, she has participated in numerous tournaments all over the country. Her love ultimately led her to play other sports, including lacrosse, track, tennis, golf, and ski.</p>
+            <p>Mia's first job was working at a summer camp in Westchester NY called Future Stars. Here she was able to share her love for soccer with a younger audience. She made new friends and learned a lot about herself.</p>
+            <p>Currently, Mia is studying Economics and Data Analytics at Syracuse University. She often thrives in male-dominated spaces. Additionally, she participates in the consulting club and University Girl Magazine. She is exploring her passion for business and technology.</p>
+        </section>
+
+        <section>
+            <header>
+                <h2>Personal Information</h2>
+            </header>
+            <p>When Mia isn't working, you can most likely find her doing an outdoor activity or shopping. She loves spending her time thrifting for unique vintage pieces.</p>
+        </section>
+
+        <section>
+            <header>
+                <h2>Personal Hobbies</h2>
+            </header>
+            <ul>
+                <li>Skiing</li>
+                <li>Golfing</li>
+                <li>Thrifting</li>
+                <li>Finding Restaurants</li>
+                <li>Going Out</li>
+                <li>Painting</li>
+                <li>Going to Concerts</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="footer-copyright">
+            &copy; 2024
+        </div>
+        <div class="footer-quote">
+            “Pain is temporary, swag is forever.”
+        </div>
+    </footer>
+</body>
+
+</html>

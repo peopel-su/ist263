@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+    
+        nav {
+            background-color: #ff79b0;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+    
+        nav a:hover {
+            color: #ff2d55;
+        }
+    
+        /* Flexbox Styles */
+        .flexbox {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-bottom: 20px;
+        }
+    
+        .skillstable {
+            flex: 1;
+            padding: 20px;
+            background-color: #a5d6a7;
+            border-radius: 8px;
+        }
+    
+        .skillsimage {
+            flex: 1;
+            padding: 20px;
+            background-color: #a5d6a7;
+            border-radius: 8px;
+            text-align: center;
+        }
+    
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+    
+        th, td {
+            padding: 0.625rem; /* Use relative font units */
+            text-align: center;
+        }
+    
+        caption {
+            font-weight: bold;
+            font-size: 1.5rem; /* Use relative font units */
+            margin-bottom: 10px;
+        }
+    
+        /* Different row colors */
+        tr:nth-child(even) {
+            background-color: #e0f7fa;
+        }
+    
+        tr:nth-child(odd) {
+            background-color: #ffe0b2;
+        }
+    
+        h1 {
+            font-size: 2.5rem; /* Use relative font units */
+            text-align: center;
+        }
+
+        /* Skip to content button */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            z-index: 100;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="skills.html">Skills</a> | 
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <main id="main-content">
+        <h1>Technical Skills</h1>
+
+        <section>
+            <header>
+                <div class="flexbox">
+                    <div class="skillstable">
+                        <table>
+                            <caption>Technical Skills</caption>
+                            <tr>
+                                <th>Category</th>
+                                <th>Skill</th>
+                                <th>Proficiency Level</th>
+                            </tr>
+                            <tr>
+                                <td>Programming</td>
+                                <td>Python</td>
+                                <td>Advanced</td>
+                            </tr>
+                            <tr>
+                                <td>Data Analysis</td>
+                                <td>R</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td>Web Development</td>
+                                <td>HTML & CSS</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td>Data Visualization</td>
+                                <td>Power BI</td>
+                                <td>Advanced</td>
+                            </tr>
+                            <tr>
+                                <td>Programming</td>
+                                <td>SQL</td>
+                                <td>Advanced</td>
+                            </tr>
+                            <tr>
+                                <td>Data Analysis</td>
+                                <td>Alteryx</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td>Web Development</td>
+                                <td>JavaScript</td>
+                                <td>Beginner</td>
+                            </tr>
+                            <tr>
+                                <td>Office Tools</td>
+                                <td>Microsoft Excel</td>
+                                <td>Advanced</td>
+                            </tr>
+                            <tr>
+                                <td>Machine Learning</td>
+                                <td>Scikit-learn</td>
+                                <td>Intermediate</td>
+                            </tr>
+                            <tr>
+                                <td>Data Visualization</td>
+                                <td>Tableau</td>
+                                <td>Beginner</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="skillsimage">
+                        <img src="https://peopel-su.github.io/ist263/images/skill_3775447.png" alt="Skills diagram featuring icons and technical concepts" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </header>
+        </section>
+    </main>
+</body>
+</html>
