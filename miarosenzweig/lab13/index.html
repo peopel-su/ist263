@@ -12,14 +12,15 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            font-size: 100%; /* Default font size (16px if browser default is not changed) */
         }
 
         h1 {
-            font-size: 2.5rem; /* Relative font size */
+            font-size: 2.5em; /* Relative to the root font size */
         }
 
         h2 {
-            font-size: 2rem; /* Relative font size */
+            font-size: 2em; /* Relative to the root font size */
         }
 
         footer {
@@ -47,37 +48,55 @@
         nav a {
             text-decoration: none;
             color: inherit;
+            font-size: 1.2em; /* Relative to the parent font size */
         }
 
-        .skip-to-content {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #000;
-            color: #fff;
-            padding: 8px;
-            z-index: 100;
-            text-decoration: none;
-        }
+ /* Skip to content */
+.skip-to-contact {
+    position: fixed; /* Fixed positioning to keep the button at the bottom */
+    bottom: 10px; /* Distance from the bottom of the viewport */
+    left: 0;
+    background: #fff; /* White background for the button */
+    color: #000; /* Black text */
+    padding: 8px;
+    z-index: 1000; /* Make sure it's on top of other content */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem;
+    display: block; /* Make it a block element */
+    width: 100%; /* Make the button span the full width */
+    text-align: center; /* Center the text */
+}
 
-        .skip-to-content:focus {
-            top: 0;
-        }
+.skip-to-skills {
+    position: fixed; /* Fixed positioning to keep the button at the bottom */
+    bottom: 10px; /* Distance from the bottom of the viewport */
+    left: 0;
+    background: #fff; /* White background for the button */
+    color: #000; /* Black text */
+    padding: 8px;
+    z-index: 1000; /* Make sure it's on top of other content */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem;
+    display: block; /* Make it a block element */
+    width: 100%; /* Make the button span the full width */
+    text-align: center; /* Center the text */
+}
+
 
         /* Media query for tablets (widths between 768px and 1024px) */
         @media (max-width: 1024px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2em; /* Resize proportionally */
             }
 
             h2 {
-                font-size: 1.8rem;
+                font-size: 1.8em; /* Resize proportionally */
             }
 
             nav a {
                 display: inline-block;
-                padding: 8px;
-                font-size: 1.2rem;
+                padding: 0.5em;
+                font-size: 1em;
             }
 
             .footer-quote,
@@ -90,25 +109,25 @@
         /* Media query for mobile devices (widths up to 767px) */
         @media (max-width: 767px) {
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.8em;
                 text-align: center;
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.5em;
                 text-align: center;
             }
 
             nav a {
                 display: block;
-                padding: 10px;
+                padding: 0.8em;
                 text-align: center;
-                font-size: 1rem;
+                font-size: 0.9em;
             }
 
             footer {
                 text-align: center;
-                font-size: 0.9rem;
+                font-size: 0.8em; /* Slightly smaller on mobile for compact layout */
             }
 
             .footer-quote,
@@ -122,8 +141,8 @@
 </head>
 
 <body>
-    <a href="#main-content" class="skip-to-content">Skip to Content</a>
-
+    <a href="contact.html" class="skip-to-contact">Skip to Contact</a>
+    <a href="skills.html" class="skip-to-skillst">Skip to Skills</a>
     <nav>
         <a href="index.html">Home</a> |
         <a href="skills.html">Skills</a> |
@@ -131,7 +150,7 @@
     </nav>
 
     <header>
-        <img src="../lab05/lab05_poster.pdf" alt="A digital poster showcasing Mia Rosenzweig's background and interests" class="responsive-img">
+        <img src="lab05_poster.png" alt="Digital poster highlighting Mia Rosenzweig's achievements and interests" class="responsive-img">
     </header>
 
     <main id="main-content">
