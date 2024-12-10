@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Second Hand - Home</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav .nav-links li {
+            display: inline-block;
+        }
+
+        /* Hamburger Menu (for mobile) */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .menu-icon.open {
+            display: block;
+        }
+
+        /* Main Content */
+        main {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .shop-now {
+            background-color: #8ca1ff; /* Gold background for Shop Now */
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .shop-now h2 {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .shop-now p {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .shop-now ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .shop-now ul li {
+            display: inline-block;
+        }
+
+        .shop-now ul li a {
+            background-color: #333; /* Button background color */
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .shop-now ul li a:hover {
+            background-color: #555; /* Hover effect for the button */
+        }
+
+        .testimonials {
+            background-color: #d3d3d3; /* Gray background for testimonials */
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-links,
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footer-links li {
+            display: inline-block;
+        }
+
+        footer a {
+            color: white; /* Make all footer links white */
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            /* Adjust hero images on small screens */
+            .hero-images {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            /* Show menu icon on smaller screens */
+            .menu-icon {
+                display: block;
+            }
+
+            /* Hide navigation links initially, show when menu icon is clicked */
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                display: none;
+                width: 100%;
+                text-align: center;
+                background-color: #fff;
+                padding: 10px 0;
+                border-top: 2px solid #ddd;
+            }
+
+            nav .nav-links li {
+                padding: 10px 0;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .shop-now ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            footer {
+                text-align: left;
+            }
+
+            .footer-links, .social-links {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+            }
+
+            .hero-images img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .footer-links, .social-links {
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span class="menu-icon" id="menuIcon" aria-label="Menu">&#9776;</span>
+        <ul class="nav-links" aria-label="Main navigation">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome to Second Hand</h1>
+        <h2>Quality Used Goods for Your Home</h2>
+        <p>Your one-stop shop for affordable, pre-loved home items.</p>
+    </main>
+
+    <header>
+        <div class="hero-images">
+            <img src="https://th.bing.com/th/id/OIP.APmGh04WLCHVwHm3wHohPgAAAA?rs=1&pid=ImgDetMain" alt="White Couch" width="200" height="200">
+            <img src="https://th.bing.com/th/id/OIP.AJdCWH_9rdRdHNAwbtU4TwAAAA?rs=1&pid=ImgDetMain" alt="Steel Table Lamp" width="200" height="200">
+            <img src="https://st.depositphotos.com/1116685/1238/i/950/depositphotos_12383309-stock-photo-wooden-cabinet.jpg" alt="Wooden gold cabinet with mirrors" width="200" height="200">
+        </div>
+    </header>
+
+    <!-- Shop Now Section -->
+    <section class="shop-now">
+        <h2>Shop Now</h2>
+        <p>Your one-stop shop for affordable, pre-loved home items.</p>
+        <ul>
+            <li><a href="furniture.html">Browse Furniture</a></li>
+            <li><a href="kitchen.html">Browse Kitchen Items</a></li>
+            <li><a href="accessories.html">Browse Accessories</a></li>
+        </ul>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <p>"Great quality and affordable prices!"</p>
+        <p>"I found the perfect addition to my home here!"</p>
+        <p>"Highly recommend for anyone looking to furnish on a budget."</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Second Hand. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="social-links">
+            <p>Follow us on: <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

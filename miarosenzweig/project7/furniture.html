@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Hand - Furniture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-grid article {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .browse-more ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .browse-more ul li {
+            margin: 10px 0;
+        }
+
+        .browse-more ul li a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .browse-more ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #9aaddc;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            footer ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Second Hand</h1>
+        <h2>Furniture for Sale</h2>
+        <section class="product-grid">
+            <article>
+                <img src="https://th.bing.com/th/id/R.9afff082b405737ec120f0c3c5c0b029?rik=oqLLO3kAttF4ew&pid=ImgRaw&r=0" alt="Wooden Queen Size bed">
+                <h3>Wooden Queen Size Bed</h3>
+                <p>$120</p>
+            </article>
+            <article>
+                <img src="https://media.istockphoto.com/id/1085770318/photo/wooden-brown-books-shelves-with-a-lamp.jpg?s=612x612&w=0&k=20&c=lmEO_bnmL8uv2u-1OrSfDQ1lVkxGROJ3HzO-JjDu9c0=" alt="Wooden Bookshelf">
+                <h3>Wooden Bookshelf</h3>
+                <p>$185</p>
+            </article>
+            <article>
+                <img src="https://th.bing.com/th/id/OIP.oo7i47isew7jY2ijSJoSpwHaFy?rs=1&pid=ImgDetMain" alt="Two-toned wooden desk">
+                <h3>Two-toned Wooden Desk</h3>
+                <p>$80</p>
+            </article>
+            <article>
+                <img src="https://th.bing.com/th/id/OIP.AQwIkIt4iMwgG6SuHYK3UgHaE8?rs=1&pid=ImgDetMain" alt="Tan wooden dining room table">
+                <h3>Tan Wooden Dining Room Table</h3>
+                <p>$300</p>
+            </article>
+            <article>
+                <img src="https://static5.depositphotos.com/1011726/493/i/950/depositphotos_4931897-stock-photo-table-fan.jpg" alt="Table fan">
+                <h3>Table Fan</h3>
+                <p>$15</p>
+            </article>
+            <article>
+                <img src="https://img1.etsystatic.com/016/0/5845440/il_fullxfull.423343967_k6zb.jpg" alt="Modern wine bottle holder">
+                <h3>Modern Wine Bottle Holder</h3>
+                <p>$35</p>
+            </article>
+        </section>
+
+        <section class="browse-more">
+            <h2>Ready to find more?</h2>
+            <ul>
+                <li><a href="kitchen.html">Browse Kitchen Items</a></li>
+                <li><a href="accessories.html">Browse Accessories</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Second Hand. All Rights Reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p>Follow us on: <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </footer>
+</body>
+</html>
