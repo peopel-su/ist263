@@ -13,6 +13,7 @@
             background-color: #f4f4f9;
             color: #333;
         }
+        
 
         header {
             background: #333;
@@ -81,7 +82,7 @@
         }
 
         .browse-more ul li a {
-            color: #007BFF;
+            color: #000; /* Changed to black */
             text-decoration: none;
         }
 
@@ -90,7 +91,7 @@
         }
 
         footer {
-            background: #9aaddc;
+            background: #333;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -113,8 +114,13 @@
             text-decoration: underline;
         }
 
-        footer p {
-            margin: 10px 0;
+        footer p a {
+            color: #fff; /* Changed Facebook and Instagram links to white */
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -126,6 +132,7 @@
             nav ul {
                 flex-direction: column;
                 gap: 10px;
+                color: #fff;
             }
 
             footer ul {
@@ -151,32 +158,32 @@
         <h2>Furniture for Sale</h2>
         <section class="product-grid">
             <article>
-                <img src="https://th.bing.com/th/id/R.9afff082b405737ec120f0c3c5c0b029?rik=oqLLO3kAttF4ew&pid=ImgRaw&r=0" alt="Wooden Queen Size bed">
+                <img src="../images/queen_bed.png" alt="Wooden Queen Size bed">
                 <h3>Wooden Queen Size Bed</h3>
                 <p>$120</p>
             </article>
             <article>
-                <img src="https://media.istockphoto.com/id/1085770318/photo/wooden-brown-books-shelves-with-a-lamp.jpg?s=612x612&w=0&k=20&c=lmEO_bnmL8uv2u-1OrSfDQ1lVkxGROJ3HzO-JjDu9c0=" alt="Wooden Bookshelf">
+                <img src="../images/bookcase.png" alt=" Dark Wood Bookshelf">
                 <h3>Wooden Bookshelf</h3>
                 <p>$185</p>
             </article>
             <article>
-                <img src="https://th.bing.com/th/id/OIP.oo7i47isew7jY2ijSJoSpwHaFy?rs=1&pid=ImgDetMain" alt="Two-toned wooden desk">
+                <img src="../images/wood_desk.png" alt="Two-toned wooden desk">
                 <h3>Two-toned Wooden Desk</h3>
                 <p>$80</p>
             </article>
             <article>
-                <img src="https://th.bing.com/th/id/OIP.AQwIkIt4iMwgG6SuHYK3UgHaE8?rs=1&pid=ImgDetMain" alt="Tan wooden dining room table">
+                <img src="../images/dining_table.png" alt="Tan wooden dining room table">
                 <h3>Tan Wooden Dining Room Table</h3>
                 <p>$300</p>
             </article>
             <article>
-                <img src="https://static5.depositphotos.com/1011726/493/i/950/depositphotos_4931897-stock-photo-table-fan.jpg" alt="Table fan">
+                <img src="../images/tablefan.png" alt="Black table fan">
                 <h3>Table Fan</h3>
                 <p>$15</p>
             </article>
             <article>
-                <img src="https://img1.etsystatic.com/016/0/5845440/il_fullxfull.423343967_k6zb.jpg" alt="Modern wine bottle holder">
+                <img src="../images/wineholder.png" alt="Modern wine bottle holder">
                 <h3>Modern Wine Bottle Holder</h3>
                 <p>$35</p>
             </article>

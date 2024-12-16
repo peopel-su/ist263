@@ -88,8 +88,30 @@
             background-color: #0056b3;
         }
 
+        .shop-now {
+            background-color: #d3d3d3;
+            color: #000;
+            padding: 15px;
+            margin-top: 20px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .shop-now:hover {
+            background-color: #bfbfbf;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         footer {
-            background: #9aaddc;
+            background: #071434;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -116,6 +138,14 @@
             margin: 10px 0;
         }
 
+        footer a {
+            color: #fff;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 flex-direction: column;
@@ -126,6 +156,11 @@
             }
 
             header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .button-container {
                 flex-direction: column;
                 gap: 10px;
             }
@@ -151,11 +186,11 @@
 
     <main id="main-content">
         <h1>
-            Sign Up for Our Newsletter  
+            Sign Up for Our Newsletter
         </h1>
-        <img src="https://cdn6.dissolve.com/p/D2115_77_050/D2115_77_050_1200.jpg" alt="Family smiling at home" width="400" height="250">
+        <img src="../images/family.png" alt="Family smiling at home" >
         <p>Picked uniquely for you! Be the first to know about trending furniture at half the price.</p>
-        
+
         <h2>Benefits of Buying Second-Hand</h2>
         <ul>
             <li>Save up to 50% compared to new items.</li>
@@ -163,7 +198,7 @@
             <li>Find unique items that tell a story.</li>
             <li>Support local businesses and charities.</li>
         </ul>
-        
+
         <form>
             <label for="first-name">First Name:</label>
             <input type="text" id="first-name" name="first-name" required>
@@ -179,6 +214,11 @@
 
         <h2>Why Choose Second Hand?</h2>
         <p>Shopping second-hand can save you up to 50% compared to new items, while also reducing waste and promoting sustainability.</p>
+
+        <div class="button-container">
+            <a href="#" class="shop-now">Shop Now</a>
+            <a href="#" class="shop-now">Explore Deals</a>
+        </div>
     </main>
 
     <footer>
