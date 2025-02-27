@@ -1,0 +1,5 @@
+ h1 {color:green;font-family: Arial, Helvetica, sans-serif;font-weight: 400;}
+        h1, p {font-style: italic;}
+        p a {color: orange;}
+        .num2 {font-size: 2em;}
+        #num1 {font-size: 0.5em;}
