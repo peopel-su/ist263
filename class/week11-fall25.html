@@ -7,10 +7,19 @@
     <style>
         h1 {cursor: pointer;}
     </style>
+    <script>
+        function SecondBlock () {
+            // alert('Second Alert');
+        }
+        function clicky () {
+            alert('This was because of a click');
+        }
+    </script>
 </head>
 <body>
+    <script>alert('I am sending an alert!');</script>
     <h1>Classic First JavaScript Program</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, hic quasi.</p>
-     <p>Nulla accusamus veritatis tempore dicta dolorem corporis veniam dolorum debitis repellendus eum, nostrum quo voluptatibus distinctio reprehenderit, praesentium hic?</p>
+     <p onmouseover="SecondBlock();">Nulla accusamus veritatis tempore dicta dolorem corporis veniam dolorum debitis repellendus eum, nostrum quo <a href="#" onclick="clicky();"> distinctio</a> reprehenderit, praesentium hic?</p>
 </body>
 </html>
