@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +13,36 @@
             cursor: pointer;
             padding: 5px;
         }
+        #modal {
+            background-color: #add8e6;
+            color:#00008b;
+            border: 2px solid #000000;
+            padding: 10px;
+            width: 200px;
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+            display: none;
+        }
+        input {
+            margin-bottom: 5px;
+        }
+        #close {
+            text-align: right;
+            cursor: pointer;
+        }
         /* write CSS to position our subscribe form and hide it when the page loads here */
     </style>
     <script>
         /* add code to open and close our subscribe form */
+        function openModal () {
+            document.getElementById('modal').style.display = 'block';
+        }
+        function closeModal () {
+            document.getElementById('modal').style.display = 'none';
+        }
     </script>
 </head>
 <body>
@@ -30,9 +57,20 @@
         
         <p>Muffin pastry cupcake cheesecake icing lollipop. Jelly beans tootsie roll tootsie roll toffee gummi bears chocolate bar. Tart cake donut fruitcake oat cake sesame snaps jelly cookie icing. Jelly liquorice pudding biscuit cookie sweet roll tootsie roll dessert lollipop.</p>
 
-        <p><a class="button">Subscribe to Our Newsletter</a></p>
+        <p><a class="button" onclick="openModal();">Subscribe to Our Newsletter</a></p>
 
         <!-- make a subscribe form here -->
+
+        <div id="modal">
+            <p id="close" onclick="closeModal();">X</p>
+            <form>
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">email</label><br>
+                <input type="text" id="email" name="email"><br>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
 
     </div>
 </body>
