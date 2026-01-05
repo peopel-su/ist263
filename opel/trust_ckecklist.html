@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trustee Checklist – Printable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f2eb;
+      --paper: #ffffff;
+      --ink: #22201c;
+      --muted: #7a7265;
+      --accent: #b2712f;
+      --accent-soft: #f3e0c8;
+      --border: #d4c8b8;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at 0 0, #f9efe0 0, transparent 55%),
+        radial-gradient(circle at 100% 100%, #e8e1d7 0, transparent 55%),
+        var(--bg);
+      color: var(--ink);
+      font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+    }
+
+    .sheet {
+      background: var(--paper);
+      max-width: 900px;
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      padding: 2.5rem 2rem 2.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .sheet {
+        padding: 3rem 3rem 2.75rem;
+      }
+    }
+
+    .sheet::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 40px 100%;
+      opacity: 0.3;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    .sheet-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    h1 {
+      font-family: "DM Serif Display", serif;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 32rem;
+      line-height: 1.5;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 0.25rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .tag {
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fbf7f1;
+    }
+
+    .print-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .print-hint {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .print-hint svg {
+      flex-shrink: 0;
+    }
+
+    button#printBtn {
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: radial-gradient(circle at 0 0, #fbe9d5, #e4b37a);
+      color: #2b2115;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.4rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      outline: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.2s ease;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    button#printBtn::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 0, rgba(255,255,255,0.5), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    button#printBtn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.16);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    button#printBtn:hover::after {
+      opacity: 1;
+    }
+
+    button#printBtn:active {
+      transform: translateY(0);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.18);
+    }
+
+    main {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+
+    .section {
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, #fff, #fcf8f1);
+      padding: 1rem 1rem 1.1rem;
+      margin-bottom: 0.9rem;
+      page-break-inside: avoid;
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 1.1rem 1.3rem 1.2rem;
+      }
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    .section-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    ul.checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0.1rem 0 0;
+    }
+
+    ul.checklist li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: flex-start;
+      gap: 0.55rem 0.6rem;
+      padding: 0.28rem 0;
+      border-top: 1px dashed rgba(212, 200, 184, 0.7);
+      position: relative;
+    }
+
+    ul.checklist li:first-child {
+      border-top: none;
+      padding-top: 0.1rem;
+    }
+
+    .box {
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 4px;
+      border: 1px solid #c6b9a7;
+      background: #fffdf9;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .item-main {
+      font-weight: 500;
+    }
+
+    .item-detail {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 1.4rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .small-note {
+      max-width: 26rem;
+      line-height: 1.4;
+    }
+
+    .legal {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.7rem;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+      .sheet {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .sheet::before {
+        opacity: 0.12;
+      }
+      button#printBtn,
+      .print-hint {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="sheet-inner">
+      <header>
+        <h1>Revocable Trust – Trustee Checklist</h1>
+        <p class="subtitle">
+          A practical, printable list to help you work through your responsibilities as trustee after your dad’s passing. 
+          Use this as a working copy and bring it to meetings with attorneys or advisors.
+        </p>
+        <div class="meta-row">
+          <span class="tag">Personal Reference Only</span>
+          <span>Prepared for: <strong>Trustee</strong></span>
+        </div>
+      </header>
+
+      <div class="print-bar">
+        <div class="print-hint">
+          <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill="#7a7265" d="M5 3.5A1.5 1.5 0 0 1 6.5 2h7A1.5 1.5 0 0 1 15 3.5V6h-1.25V3.75c0-.138-.112-.25-.25-.25h-6c-.138 0-.25.112-.25.25V6H5V3.5ZM4 7h12a2 2 0 0 1 2 2v4.25A1.75 1.75 0 0 1 16.25 15H15v-2.25c0-.414-.336-.75-.75-.75h-6.5A.75.75 0 0 0 7 12.75V15H3.75A1.75 1.75 0 0 1 2 13.25V9a2 2 0 0 1 2-2Zm10 6.5V16.5A1.5 1.5 0 0 1 12.5 18h-5A1.5 1.5 0 0 1 6 16.5V13.5h8Z"/>
+          </svg>
+          <span>Tip: Click “Print Checklist” or use Ctrl+P / Cmd+P.</span>
+        </div>
+        <button id="printBtn" type="button">
+          <svg width="13" height="13" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill="#2b2115" d="M5 3.5A1.5 1.5 0 0 1 6.5 2h7A1.5 1.5 0 0 1 15 3.5V6h-1.25V3.75c0-.138-.112-.25-.25-.25h-6c-.138 0-.25.112-.25.25V6H5V3.5ZM4 7h12a2 2 0 0 1 2 2v4.25A1.75 1.75 0 0 1 16.25 15H15v-2.25c0-.414-.336-.75-.75-.75h-6.5A.75.75 0 0 0 7 12.75V15H3.75A1.75 1.75 0 0 1 2 13.25V9a2 2 0 0 1 2-2Zm10 6.5V16.5A1.5 1.5 0 0 1 12.5 18h-5A1.5 1.5 0 0 1 6 16.5V13.5h8Z"/>
+          </svg>
+          <span>Print Checklist</span>
+        </button>
+      </div>
+
+      <main>
+        <!-- Initial Steps -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">Initial Steps</div>
+            <div class="section-note">Start here, in the first days and weeks.</div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Obtain certified copies of the death certificate</div>
+                <div class="item-detail">Request several copies (often 5–10) from the funeral home or vital records office.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Locate the trust and estate documents</div>
+                <div class="item-detail">Find the original revocable trust, any amendments, your dad’s will (if any), and any written instructions.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Gather key financial documents</div>
+                <div class="item-detail">Recent account statements, life insurance policies, retirement statements, loan documents, deeds, vehicle titles, and business records.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Understand the Trust & Notify -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">Understand the Trust & Notify People</div>
+            <div class="section-note">Clarify your role and keep everyone informed.</div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Read the trust document carefully</div>
+                <div class="item-detail">Review who the beneficiaries are, what they are to receive, and any special instructions or timelines.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Confirm your authority as trustee</div>
+                <div class="item-detail">Make sure you are the current trustee (and note any co‑trustees or successor trustees).</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Notify beneficiaries</div>
+                <div class="item-detail">Inform all beneficiaries named in the trust of your dad’s passing and your role as trustee. Some states require written notice.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Notify key institutions</div>
+                <div class="item-detail">Contact banks, investment firms, life insurance companies, and employers, providing death certificates and trust documentation as requested.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Identify and Protect Assets -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">Identify & Protect Trust Assets</div>
+            <div class="section-note">Create a clear inventory and secure everything.</div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Create a full inventory of trust assets</div>
+                <div class="item-detail">List all assets held in the trust: bank and investment accounts, real estate, vehicles, business interests, and significant personal property.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Confirm which assets are titled in the trust</div>
+                <div class="item-detail">Check account registrations and deeds to distinguish trust assets from assets that may still be in your dad’s individual name.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Secure physical property</div>
+                <div class="item-detail">Lock and insure the home, safeguard valuables, and update mailing addresses so you receive important mail.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Maintain insurance coverage</div>
+                <div class="item-detail">Ensure homeowners, auto, and liability policies remain in force while the trust is being administered.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Debts & Ongoing Expenses -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">Debts & Ongoing Expenses</div>
+            <div class="section-note">Handle bills carefully and document everything.</div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Identify outstanding debts and obligations</div>
+                <div class="item-detail">Review mail and statements for credit cards, loans, medical bills, utilities, and subscriptions.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Understand creditor notification rules</div>
+                <div class="item-detail">Ask an attorney whether your state requires formal notice to creditors or publication in a newspaper.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Pay appropriate expenses from trust/estate funds</div>
+                <div class="item-detail">Funeral costs, last medical bills, utilities, property taxes, insurance, and other necessary expenses related to trust assets.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Taxes -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">Tax Responsibilities</div>
+            <div class="section-note">Coordinate with a tax professional if possible.</div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">File your dad’s final income tax return</div>
+                <div class="item-detail">Covers the period from January 1 through the date of death. A CPA can help you gather what’s needed.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Determine if trust or estate tax returns are required</div>
+                <div class="item-detail">Some trusts must file their own income tax returns (Form 1041 in the U.S.) after death.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Pay any taxes due</div>
+                <div class="item-detail">Use trust or estate funds to pay federal, state, and local taxes before making final distributions.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Distributions to Beneficiaries -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">Distribute Assets to Beneficiaries</div>
+            <div class="section-note">Follow the trust document exactly.</div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Confirm that debts, taxes, and key expenses are handled</div>
+                <div class="item-detail">Before distributing assets, ensure there are sufficient funds to cover all obligations.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Follow the trust’s distribution instructions</div>
+                <div class="item-detail">Make distributions exactly as described (specific gifts, percentages, or continuing trusts for certain beneficiaries).</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Transfer or retitle assets</div>
+                <div class="item-detail">Work with banks, brokerages, and the county recorder (for real estate) to move assets into beneficiaries’ names.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Obtain written receipts from beneficiaries</div>
+                <div class="item-detail">Have beneficiaries acknowledge what they received and the date, for your records.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Recordkeeping & Professional Help -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">Recordkeeping & Professional Help</div>
+            <div class="section-note">Protect yourself by documenting your work.</div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Keep detailed financial records</div>
+                <div class="item-detail">Track all income, expenses, and distributions. Save statements, checks, and receipts in one organized place.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Provide accountings if required</div>
+                <div class="item-detail">Some trusts or state laws require periodic accountings to beneficiaries. An attorney can help you prepare these.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Consult an estate attorney</div>
+                <div class="item-detail">Especially if there are disputes, complex assets, property in multiple states, or unclear instructions.</div>
+              </div>
+            </li>
+            <li>
+              <div class="box"></div>
+              <div class="item-text">
+                <div class="item-main">Work with a CPA or tax professional</div>
+                <div class="item-detail">To handle final and fiduciary tax returns, and to avoid missing important deadlines.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <div class="small-note">
+          This checklist is a general reference and not legal or tax advice. Laws vary by state and situation. 
+          Discuss your specific circumstances with a qualified attorney or tax professional.
+        </div>
+        <div class="legal">
+          Trustee Working Copy
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('printBtn').addEventListener('click', function () {
+      window.print();
+    });
+  </script>
+</body>
+</html>
