@@ -5,6 +5,23 @@
         <title>Unit 8 Floats</title>
         <meta charset="UTF-8">
         <style>
+            .image1 {
+                float: left;
+                padding: 0 1em 1em 0;
+            }
+            .image2 {
+                float: right;
+                padding: 0 0 1em 1em;
+            }
+            .clearfloat {clear:both;}
+           .outercontainer {display: flex; border: 5px solid black;}
+           .outercontainer div {background-color: aqua; padding: 1em; border: 3px solid burlywood;}
+           .fb1 {flex: 5;}
+           .fb2 {flex: 2;}
+
+
+
+
 
         </style>
     </head>
@@ -15,18 +32,20 @@
         <h1>Sinclair Broadcast Group hit by ransomware attack, upending local TV newscasts</h1>
         <p>Sinclair Broadcast Group (SBGI), one of the largest TV station operators in the US, said Monday that a ransomware incident is disrupting some of its office and operational networks.</p>
         
-        <img src="https://peopel-su.github.io/ist263/class/images/210712160202-ransomware-cyberattack-stock.jpg" alt="laptop and mouse">
+        <img class="image1" src="https://peopel-su.github.io/ist263/class/images/210712160202-ransomware-cyberattack-stock.jpg" alt="laptop and mouse">
 
         <p>The unidentified hackers also stole data from Sinclair's network; the company said it was working to determine what information was taken. Sinclair said it had notified law enforcement and US government agencies, and that it was working to "restore operations quickly and securely."</p>
         <p>Sinclair CEO Chris Ripley repeated the statement at Monday afternoon's town hall and fielded questions from staffers, but he had little concrete information to share, according to the reporters who spoke with CNN.</p>
         <p>He did specify that employees will still receive their paychecks despite the disruption, one of the reporters said.</p>
+        <div class="clearfloat"></div>
 
-        <img src="https://peopel-su.github.io/ist263/class/images/210720122433-colonial-pipeline-fuel-tanks.jpg" alt="oil tanks">
+        <img class="image2" src="https://peopel-su.github.io/ist263/class/images/210720122433-colonial-pipeline-fuel-tanks.jpg" alt="oil tanks">
 
         <p>Sinclair is responsible for 185 television stations in 86 markets, according to its website. It also runs regional sports networks.</p>
         <p>The company's stations are still on the air, and are continuing to show national and syndicated programming like talk shows and sitcoms.</p>
 
-        <p>The problems are largely hindering local live programming, like the newscasts that typically air for multiple hours a day.</p>
+          <div class="clearfloat"></div>
+          <p>The problems are largely hindering local live programming, like the newscasts that typically air for multiple hours a day.</p>
         <p>Some stations struggled to produce newscasts on Sunday without writing, editing or scheduling software.</p>
         <p>Kristin Bien, a weekend anchor at Sinclair-owned WSBT 22, tweeted Sunday morning that the incident was a "corporate-wide problem."</p>
         <p>"All we are told right now is that we have technical difficulties," one journalist at a Sinclair-owned station told CNN Sunday night. "We are still told to broadcast if we can, so we're doing what we can with our live unit and weather graphics. We don't have access to our company emails or anything that requires a company log in."</p>
@@ -35,6 +54,15 @@
         <p>This isn't the first time that a cybersecurity incident has hobbled a prominent TV broadcaster.</p>
         <p>Australia's 9 News network in March said a cyberattack disrupted its live broadcasts. And in the US, local stations owned by the Cox Media Group were hit in June.</p>
         <p>The Record, a cybersecurity news outlet, was first to report on the ransomware incident at Sinclair.</p>
+
+<!-- Flexbox   -->
+        <div class="outercontainer">
+            <div class="fb1">Flex Item 1
+                <div>Inner Div</div>
+            </div>
+            <div class="fb2">Flex Item 2</div>
+            <div class="fb3">Flex Item 3</div>
+        </div>
 
 
     </body>
