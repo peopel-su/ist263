@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12</title>
+    <style>
+        #lastheader {display: none;}
+    </style>
+    <script>
+        function change () {
+            document.getElementById("arrow").setAttribute("src", "https://peopel-su.github.io/ist263/images/arrow_over.png")
+        }
+        function changeBack () {
+            document.getElementById("arrow").setAttribute("src", "https://peopel-su.github.io/ist263/images/arrow.png")
+        }
+        function wrongAnswer () {
+            document.getElementById("wrong").innerHTML = "<span style='color: red;'>Wrong Answer!</span>"
+        }
+        function bluey () {
+            document.getElementById("bluetext").style.color = "#0000FF";
+            document.getElementById("bluetext").style.border = "solid 2px #FF00FF";
+        }
+        function hideFirst () {
+            document.getElementById("firstheader").style.display = "none";
+            document.getElementById("lastheader").style.display = "block"
+        }
+        function showFirst () {
+            document.getElementById("firstheader").style.display = "block";
+            document.getElementById("lastheader").style.display = "none"
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Rollovers</h1>
+    <img id="arrow" src="https://peopel-su.github.io/ist263/images/arrow.png" alt="arrow icon" onmouseover="change()" onmouseout="changeBack()">
+
+        <h1 id="bluetext" onclick="bluey()">My JavaScript Quiz</h1>
+    <p>Java and JavaScript are the same thing.</p>
+    <p onclick="wrongAnswer();" id="wrong">True</p>
+    <p onclick="rightAnswer()" id="correct">False</p>
+
+    <h1 id="firstheader" onclick="hideFirst()">The First Header</h1>
+    <h1 id="lastheader" onclick="showFirst()">The Last Header</h1>
+
+</body>
+</html>
