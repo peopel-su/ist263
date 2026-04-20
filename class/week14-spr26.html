@@ -5,7 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+
+p {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
         .container {width: 800px; margin: 0 auto;}
         .button {
             background-color: lightblue;
@@ -13,16 +27,33 @@
             padding: 5px;
         }
         /* write CSS to position our subscribe form and hide it when the page loads here */
+        #modal {
+            width: 300px;
+            padding: 1em;
+            border: 2px solid #000000;
+            background-color: #f6f9cb;
+            position: absolute;
+            top: 400px;
+            left: 500px;
+            display: none;
+        }
     </style>
     <script>
         /* add code to open and close our subscribe form */
+                function openModal () {
+        document.getElementById('modal').style.display = 'block';
+        }
+                function closeModal () {
+        document.getElementById('modal').style.display = 'none';
+        }
+ 
     </script>
 </head>
 <body>
     <div class="container">
         <img src="https://laferger.github.io/ist263/images/cupcakes.jpg">
         <h1>Desserts</h1>
-        <p>Tootsie roll icing dessert oat cake lollipop jelly apple pie muffin. Jelly jelly-o bear claw topping muffin pudding oat cake. Carrot cake candy pie jujubes muffin tootsie roll. Brownie topping apple pie cupcake danish chocolate cotton candy gingerbread.</p>
+        <p class="sour-gummy-bold">Tootsie roll icing dessert oat cake lollipop jelly apple pie muffin. Jelly jelly-o bear claw topping muffin pudding oat cake. Carrot cake candy pie jujubes muffin tootsie roll. Brownie topping apple pie cupcake danish chocolate cotton candy gingerbread.</p>
         
         <p>Biscuit oat cake soufflé icing gingerbread cotton candy shortbread cupcake gummi bears. Chocolate cake lollipop biscuit lemon drops jelly tiramisu pie oat cake liquorice. Carrot cake cake cupcake cupcake lollipop sweet roll.</p>
         
@@ -30,9 +61,18 @@
         
         <p>Muffin pastry cupcake cheesecake icing lollipop. Jelly beans tootsie roll tootsie roll toffee gummi bears chocolate bar. Tart cake donut fruitcake oat cake sesame snaps jelly cookie icing. Jelly liquorice pudding biscuit cookie sweet roll tootsie roll dessert lollipop.</p>
 
-        <p><a class="button">Subscribe to Our Newsletter</a></p>
+        <p><a class="button" onclick="openModal()">Subscribe to Our Newsletter</a></p>
 
         <!-- make a subscribe form here -->
+
+        <div id="modal">
+            <p id="close" onclick="closeModal()">X</p>
+            <form>
+                <label for="email">Enter your Email address</label><br>
+                <input type="text" name="email" id="email"><br>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
 
     </div>
 </body>
